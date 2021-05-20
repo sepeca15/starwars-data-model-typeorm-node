@@ -1,9 +1,10 @@
 import {
-    Entity, Column, PrimaryGeneratedColumn, ManyToMany, 
+    Entity, Column, PrimaryGeneratedColumn, OneToMany, 
     BaseEntity, JoinTable
   } from 'typeorm';
+
+import {Favoritos} from "./Favortios"
   
-  // import {Planet} from "./Planet"
   @Entity()
   export class Planetas extends BaseEntity{
     @PrimaryGeneratedColumn()
@@ -39,8 +40,5 @@ import {
     @Column()
     img_url: string;
   
-    // @ManyToMany(() => Planet)
-    // @JoinTable()
-    // planets: Planet[];
     
   }

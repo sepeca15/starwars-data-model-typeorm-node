@@ -24,37 +24,60 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 exports.__esModule = true;
-exports.User = void 0;
+exports.Personajes = void 0;
 var typeorm_1 = require("typeorm");
-// import {Planet} from "./Planet"
-var User = /** @class */ (function (_super) {
-    __extends(User, _super);
-    function User() {
+var Personajes = /** @class */ (function (_super) {
+    __extends(Personajes, _super);
+    function Personajes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
         typeorm_1.PrimaryGeneratedColumn(),
         __metadata("design:type", Number)
-    ], User.prototype, "id");
+    ], Personajes.prototype, "id");
     __decorate([
         typeorm_1.Column(),
         __metadata("design:type", String)
-    ], User.prototype, "first_name");
+    ], Personajes.prototype, "nombre");
     __decorate([
         typeorm_1.Column(),
         __metadata("design:type", String)
-    ], User.prototype, "last_name");
+    ], Personajes.prototype, "diametro");
     __decorate([
-        typeorm_1.Column({ unique: true }),
+        typeorm_1.Column(),
         __metadata("design:type", String)
-    ], User.prototype, "email");
+    ], Personajes.prototype, "periodo_de_rotacion");
     __decorate([
-        typeorm_1.Column({ unique: true }),
+        typeorm_1.Column(),
         __metadata("design:type", String)
-    ], User.prototype, "password");
-    User = __decorate([
+    ], Personajes.prototype, "periodo_orbital");
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Personajes.prototype, "gravedad");
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Personajes.prototype, "poblacion");
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Personajes.prototype, "clima");
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Personajes.prototype, "terreno");
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Personajes.prototype, "agua_en_la_superficie");
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Personajes.prototype, "img_url");
+    Personajes = __decorate([
         typeorm_1.Entity()
-    ], User);
-    return User;
+    ], Personajes);
+    return Personajes;
 }(typeorm_1.BaseEntity));
-exports.User = User;
+exports.Personajes = Personajes;
